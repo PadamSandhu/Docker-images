@@ -1,0 +1,14 @@
+# Version of the Docker-compose
+version: '3'
+
+# - in yml file means array
+
+# services is a type of container
+services:
+  redis-server:
+    image: 'redis'
+  node-app:
+    restart: always
+    build: .
+    ports:
+      - '4001:8081'
